@@ -1,87 +1,67 @@
 backend:
   name: git-gateway
   branch: main
+  publish_mode: editorial_workflow
 
-locale: fr
-media_folder: images
-public_folder: /images
+media_folder: "images"
+public_folder: "images"
 
 collections:
-  - name: carte
-    label: La Carte du Restaurant
-    folder: content/carte
+  # 1. GESTION DE LA CARTE DU RESTAURANT
+  - name: "carte"
+    label: "🍲 La Carte du Déjeuner"
+    folder: "content/carte"
     create: true
-    extension: md
-    format: frontmatter
     slug: "{{slug}}"
     fields:
-      - {label: Nom du Plat, name: title, widget: string}
-      - {label: "Prix (en €)", name: price, widget: number, value_type: float, min: 0}
-      - {label: Description ou Ingrédients, name: body, widget: markdown}
-      - label: Catégorie
-        name: categorie
-        widget: select
-        options: [Entrée, Plat, Dessert, Vente à emporter]
+      - {label: "Nom du plat", name: "title", widget: "string"}
+      - {label: "Prix (€)", name: "price", widget: "number", value_type: "float"}
+      - {label: "Catégorie", name: "categorie", widget: "select", options: ["Entrée", "Plat", "Dessert", "Petit-Déjeuner / Goûter"]}
+      - {label: "Description du plat", name: "body", widget: "markdown"}
 
-  - name: infos
-    label: Informations pratiques
-    files:
-      - file: content/infos/horaires.md
-        label: Horaires & Infos
-        name: horaires
-        fields:
-          - {label: Téléphone du Restaurant, name: telephone, widget: string}
-          - {label: Adresse complète, name: adresse, widget: string}
-          - {label: Horaires du Midi, name: midi, widget: string}
-          - {label: Horaires du Soir, name: soir, widget: string}
-          - {label: Message d’alerte, name: alerte, widget: text, required: false}
-
-  - name: rubriques
-    label: Rubriques supplémentaires
-    folder: content/rubriques
+  # 2. GESTION DU SHOP / MON ÉPICERIE FINE (Les 10 Produits)
+  - name: "epicerie"
+    label: "🛒 Mon Épicerie Fine"
+    folder: "content/epicerie"
     create: true
-    extension: md
-    format: frontmatter
     slug: "{{slug}}"
     fields:
-      - {label: Titre, name: title, widget: string}
-      - {label: Texte, name: body, widget: markdown}
-      - {label: Image, name: image, widget: image, required: false}
-      - {label: Ordre, name: ordre, widget: number, value_type: int, default: 1}
-      - {label: Afficher, name: visible, widget: boolean, default: true}
+      - {label: "Nom du produit", name: "title", widget: "string"}
+      - {label: "Image du produit", name: "image_produit", widget: "image"}
+      - {label: "Prix de vente (€)", name: "price", widget: "number", value_type: "float"}
+      - {label: "Description courte", name: "body", widget: "string"}
 
-  - name: evenement
-    label: Page Événement
+  # 3. GESTION DE LA PAGE ÉVÉNEMENTS & NOËL
+  - name: "evenements"
+    label: "🎄 Événements & Menus de Noël"
+    delete: false
+    editor:
+      preview: false
     files:
-      - file: content/evenement.md
-        label: Menus, carte et réservation
-        name: evenement
+      - file: "content/evenement.md"
+        label: "Configuration de la page Événements"
+        name: "configuration_evenement"
         fields:
-          - {label: Titre de la page, name: title, widget: string}
-          - {label: Présentation, name: introduction, widget: text}
-          - {label: Téléphone pour les événements, name: telephone, widget: string, required: false, hint: "Si vide, utilise le téléphone des Informations pratiques."}
-          - {label: E-mail de contact affiché, name: email, widget: string, required: false, hint: "Les notifications des formulaires se règlent séparément dans Netlify."}
-          - {label: Informations de réservation, name: reservation, widget: text}
-          - label: Les trois menus
-            name: menus
-            widget: list
-            min: 3
-            max: 3
-            summary: "{{fields.title}}"
-            fields:
-              - {label: Nom du menu, name: title, widget: string}
-              - {label: "Prix par personne (€)", name: price, widget: number, value_type: float, min: 0, required: false}
-              - {label: Précision du tarif, name: precision, widget: string, required: false, hint: "Ex. hors boissons"}
-              - {label: Entrées, name: entrees, widget: text}
-              - {label: Plats, name: plats, widget: text}
-              - {label: Desserts, name: desserts, widget: text}
-          - label: À la carte pour les événements
-            name: carte
-            widget: list
-            required: false
-            summary: "{{fields.title}} — {{fields.categorie}}"
-            fields:
-              - {label: Nom du plat, name: title, widget: string}
-              - {label: "Prix (€)", name: price, widget: number, value_type: float, min: 0}
-              - {label: Description, name: description, widget: text, required: false}
-              - {label: Catégorie, name: categorie, widget: select, options: [Entrée, Plat, Dessert]}
+          - {label: "Titre de la page", name: "title", widget: "string"}
+          - {label: "Texte d'introduction de Noël", name: "intro_text", widget: "markdown"}
+          - {label: "Menu Gourmet (35€)", name: "menu_1", widget: "markdown"}
+          - {label: "Menu Prestige (48€)", name: "menu_2", widget: "markdown"}
+          - {label: "Menu BAM d'Or (65€)", name: "menu_3", widget: "markdown"}
+          - {label: "Entrées, Plats, Desserts À la Carte", name: "a_la_carte", widget: "markdown"}
+
+  # 4. INFOS PRATIQUES, HORAIRES & ALERTE VERTE
+  - name: "infos"
+    label: "ℹ️ Horaires & Infos Contact"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - file: "content/infos/horaires.md"
+        label: "Horaires et Contact"
+        name: "horaires"
+        fields:
+          - {label: "Téléphone du restaurant", name: "telephone", widget: "string"}
+          - {label: "Adresse physique", name: "adresse", widget: "string"}
+          - {label: "Horaires du Midi", name: "midi", widget: "string"}
+          - {label: "Horaires du Soir", name: "soir", widget: "string"}
+          - {label: "Bandeau d'alerte vert (Texte défilant)", name: "alerte", widget: "string"}
