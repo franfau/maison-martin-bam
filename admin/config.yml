@@ -1,0 +1,87 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: fr
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: carte
+    label: La Carte du Restaurant
+    folder: content/carte
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - {label: Nom du Plat, name: title, widget: string}
+      - {label: "Prix (en €)", name: price, widget: number, value_type: float, min: 0}
+      - {label: Description ou Ingrédients, name: body, widget: markdown}
+      - label: Catégorie
+        name: categorie
+        widget: select
+        options: [Entrée, Plat, Dessert, Vente à emporter]
+
+  - name: infos
+    label: Informations pratiques
+    files:
+      - file: content/infos/horaires.md
+        label: Horaires & Infos
+        name: horaires
+        fields:
+          - {label: Téléphone du Restaurant, name: telephone, widget: string}
+          - {label: Adresse complète, name: adresse, widget: string}
+          - {label: Horaires du Midi, name: midi, widget: string}
+          - {label: Horaires du Soir, name: soir, widget: string}
+          - {label: Message d’alerte, name: alerte, widget: text, required: false}
+
+  - name: rubriques
+    label: Rubriques supplémentaires
+    folder: content/rubriques
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    fields:
+      - {label: Titre, name: title, widget: string}
+      - {label: Texte, name: body, widget: markdown}
+      - {label: Image, name: image, widget: image, required: false}
+      - {label: Ordre, name: ordre, widget: number, value_type: int, default: 1}
+      - {label: Afficher, name: visible, widget: boolean, default: true}
+
+  - name: evenement
+    label: Page Événement
+    files:
+      - file: content/evenement.md
+        label: Menus, carte et réservation
+        name: evenement
+        fields:
+          - {label: Titre de la page, name: title, widget: string}
+          - {label: Présentation, name: introduction, widget: text}
+          - {label: Téléphone pour les événements, name: telephone, widget: string, required: false, hint: "Si vide, utilise le téléphone des Informations pratiques."}
+          - {label: E-mail de contact affiché, name: email, widget: string, required: false, hint: "Les notifications des formulaires se règlent séparément dans Netlify."}
+          - {label: Informations de réservation, name: reservation, widget: text}
+          - label: Les trois menus
+            name: menus
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Nom du menu, name: title, widget: string}
+              - {label: "Prix par personne (€)", name: price, widget: number, value_type: float, min: 0, required: false}
+              - {label: Précision du tarif, name: precision, widget: string, required: false, hint: "Ex. hors boissons"}
+              - {label: Entrées, name: entrees, widget: text}
+              - {label: Plats, name: plats, widget: text}
+              - {label: Desserts, name: desserts, widget: text}
+          - label: À la carte pour les événements
+            name: carte
+            widget: list
+            required: false
+            summary: "{{fields.title}} — {{fields.categorie}}"
+            fields:
+              - {label: Nom du plat, name: title, widget: string}
+              - {label: "Prix (€)", name: price, widget: number, value_type: float, min: 0}
+              - {label: Description, name: description, widget: text, required: false}
+              - {label: Catégorie, name: categorie, widget: select, options: [Entrée, Plat, Dessert]}

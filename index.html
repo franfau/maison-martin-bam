@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Sérignan-du-Comtat | Maison Martin BAM</title>
+  <meta name="description" content="Maison Martin BAM, restaurant à Sérignan-du-Comtat : cuisine maison, plats à emporter et repas à partager dans le Vaucluse (84). Découvrez la carte et les horaires.">
+  <meta name="theme-color" content="#f9e0cf">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="header">
+    <a class="wordmark" href="/" aria-label="Maison Martin BAM, accueil">Maison Martin
+      <img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24">
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#cuisine">Notre cuisine</a><a href="#carte">La carte</a><a href="/evenement/">Événement</a><a href="#venir">Nous trouver</a>
+    </nav>
+    <a class="button" href="#carte">Voir la carte ↗</a>
+  </header>
+  <div id="alerte" role="status"><!-- ALERTE --></div>
+  <main id="main">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">MAISON MARTIN · SÉRIGNAN-DU-COMTAT</p>
+        <h1>Le restaurant<br>qui <em>s’emporte.</em></h1>
+        <p class="intro">Cuisiné chez nous,<br>dégusté où vous voulez.</p>
+        <p>Votre restaurant à Sérignan-du-Comtat vous accueille autour d’une cuisine maison : des plats à emporter, à partager ou à savourer sur place.</p>
+        <a class="button" href="#carte">Découvrir les plats ↓</a>
+      </div>
+      <img class="logo" src="/images/logo.png" alt="Maison Martin BAM — Le restaurant qui s’emporte" width="500" height="500">
+    </section>
+    <div class="ribbon" aria-hidden="true">FAIT MAISON ✳ GOURMAND ✳ CONVIVIAL ✳ BAM !</div>
+    <section id="cuisine" class="section">
+      <p class="eyebrow">À CHAQUE ENVIE, SON MOMENT</p>
+      <h2>Chez BAM,<br>on trouve quoi ?</h2>
+      <div class="offers">
+        <article><span class="eyebrow">01 / LE MIDI</span><img src="/images/tartine-transparent.png" alt="Illustration d’une tartine" loading="lazy"><h3>Le déjeuner</h3><p>Sandwichs maison, bowls, salades-repas et plats individuels pour votre pause déjeuner.</p></article>
+        <article><span class="eyebrow">02 / À PLUSIEURS</span><img src="/images/plat-transparent.png" alt="Illustration d’un plat à partager" loading="lazy"><h3>Plats à emporter</h3><p>Plats mijotés, recettes familiales, légumes cuisinés et accompagnements : la cuisine Maison Martin s’invite à votre table.</p></article>
+        <article><span class="eyebrow">03 / LA PAUSE DOUCE</span><img src="/images/cafe-transparent.png" alt="Illustration d’une tasse de café" loading="lazy"><h3>Le goûter</h3><p>Pâtisseries maison et boissons chaudes. Le plaisir de prendre son temps.</p></article>
+      </div>
+      <p class="vegetal">✳ Du végétal aussi : une cuisine gourmande qui a toute sa place à table.</p>
+    </section>
+    <section class="story section">
+      <p class="eyebrow">LA MÊME MAISON. UNE NOUVELLE FORMULE.</p>
+      <h2>On change de formule,<br><em>pas de cuisine.</em></h2>
+      <p>Maison Martin conserve son identité et son goût du fait maison. Avec BAM, profitez de notre cuisine à Sérignan-du-Comtat, chez vous… ou ici.</p>
+      <p>Vous recherchez un traiteur dans le Vaucluse (84) pour un repas à partager ? Contactez Maison Martin pour échanger sur vos envies et les possibilités du moment.</p>
+    </section>
+    <section id="carte" class="section">
+      <p class="eyebrow">À VOUS DE CHOISIR</p>
+      <h2>La carte de la maison.</h2>
+      <p>Découvrez nos recettes et leurs prix. Les commandes et le paiement en ligne ne sont pas encore ouverts.</p>
+      <div id="filters" class="filters" role="group" aria-label="Filtrer les plats" hidden>
+        <button type="button" data-category="Tout" aria-pressed="true">Tout</button>
+        <button type="button" data-category="Entrée" aria-pressed="false">Entrées</button>
+        <button type="button" data-category="Plat" aria-pressed="false">Plats</button>
+        <button type="button" data-category="Dessert" aria-pressed="false">Desserts</button>
+        <button type="button" data-category="Vente à emporter" aria-pressed="false">Vente à emporter</button>
+      </div>
+      <div id="menu" class="menu"><!-- MENU --></div>
+      <p id="menu-status" role="status"></p>
+    </section>
+    <div id="rubriques"><!-- RUBRIQUES --></div>
+    <section id="venir" class="visit section">
+      <div><p class="eyebrow">À EMPORTER. OU À DÉGUSTER ICI.</p><h2>On se retrouve<br>à la maison ?</h2></div>
+      <div id="infos"><!-- INFOS --></div>
+    </section>
+  </main>
+  <footer>
+    <a class="wordmark" href="/">Maison Martin<img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24"></a>
+    <p>Cuisiné chez nous, dégusté où vous voulez.</p>
+    <a href="https://www.instagram.com/restaurant_maisonmartin/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    <a href="/admin/">Gérer le site</a>
+  </footer>
+</body>
+</html>

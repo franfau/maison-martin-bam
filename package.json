@@ -1,0 +1,11 @@
+{
+  "name": "maison-martin-bam",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "markdown-it": "14.1.0"
+  }
+}

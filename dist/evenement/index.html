@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Événement — Menus et réservation | Maison Martin BAM</title>
+  <meta name="description" content="Préparez votre événement avec Maison Martin BAM à Sérignan-du-Comtat : trois menus, entrées, plats et desserts à la carte. Demandez votre réservation.">
+  <meta name="theme-color" content="#596925">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/evenement.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="header">
+    <a class="wordmark" href="/" aria-label="Maison Martin BAM, accueil">Maison Martin<img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24"></a>
+    <nav aria-label="Navigation principale"><a href="/">Accueil</a><a href="/#carte">La carte</a><a href="/evenement/" aria-current="page">Événement</a></nav>
+    <a class="button" href="#reservation">Nous contacter ↗</a>
+  </header>
+  <main id="main">
+    <section class="event-hero section">
+      <div><p class="eyebrow">LES BONNES OCCASIONS DE SE RETROUVER</p><h1>Vos événements, à la façon Maison Martin.</h1><p class="intro event-intro">Un repas à partager, une occasion à célébrer. Découvrez nos trois menus et nos propositions à la carte, puis échangeons sur votre événement.</p><a class="button" href="#menus">Découvrir les menus ↓</a></div>
+      <img src="/images/plat-transparent.png" alt="Un plat à partager" width="500" height="300">
+    </section>
+    <div class="ribbon" aria-hidden="true">À PARTAGER ✳ À CÉLÉBRER ✳ À SAVOURER</div>
+    <section id="menus" class="section">
+      <p class="eyebrow">TROIS FAÇONS DE SE RÉGALER</p><h2>Nos menus événement.</h2>
+      <div class="event-menus"><article class="event-menu"><p class="eyebrow">FORMULE 01</p>
+      <h3>Menu 1</h3><p class="event-price">Tarif à venir</p>
+      <p class="price-note"></p>
+      <dl><dt>Entrée</dt><dd>Les entrées seront annoncées prochainement.</dd><dt>Plat</dt><dd>Les plats seront annoncés prochainement.</dd><dt>Dessert</dt><dd>Les desserts seront annoncés prochainement.</dd></dl>
+      <a class="button" href="#reservation" data-menu-choice="menu-1">Choisir ce menu ↗</a></article>
+<article class="event-menu"><p class="eyebrow">FORMULE 02</p>
+      <h3>Menu 2</h3><p class="event-price">Tarif à venir</p>
+      <p class="price-note"></p>
+      <dl><dt>Entrée</dt><dd>Les entrées seront annoncées prochainement.</dd><dt>Plat</dt><dd>Les plats seront annoncés prochainement.</dd><dt>Dessert</dt><dd>Les desserts seront annoncés prochainement.</dd></dl>
+      <a class="button" href="#reservation" data-menu-choice="menu-2">Choisir ce menu ↗</a></article>
+<article class="event-menu"><p class="eyebrow">FORMULE 03</p>
+      <h3>Menu 3</h3><p class="event-price">Tarif à venir</p>
+      <p class="price-note"></p>
+      <dl><dt>Entrée</dt><dd>Les entrées seront annoncées prochainement.</dd><dt>Plat</dt><dd>Les plats seront annoncés prochainement.</dd><dt>Dessert</dt><dd>Les desserts seront annoncés prochainement.</dd></dl>
+      <a class="button" href="#reservation" data-menu-choice="menu-3">Choisir ce menu ↗</a></article></div>
+    </section>
+    <section id="carte-evenement" class="section event-carte">
+      <p class="eyebrow">SELON VOS ENVIES</p><h2>Ou à la carte.</h2>
+      <div class="event-categories"><div><h3>Les entrées</h3><p>Nos propositions seront annoncées prochainement.</p></div>
+<div><h3>Les plats</h3><p>Nos propositions seront annoncées prochainement.</p></div>
+<div><h3>Les desserts</h3><p>Nos propositions seront annoncées prochainement.</p></div></div>
+    </section>
+    <section id="reservation" class="section event-reservation">
+      <div class="reservation-copy"><p class="eyebrow">PARLONS DE VOTRE ÉVÉNEMENT</p><h2>On organise<br>ça ensemble ?</h2><p class="preserve">Indiquez la date souhaitée et le nombre de personnes. Nous vous recontacterons pour préciser votre demande et confirmer les disponibilités.</p><div class="event-phone"><p>Vous préférez en parler ?<br><a class="phone-link" href="tel:0486389998">04 86 38 99 98</a></p><p><a href="mailto:maisonmartin2020@gmail.com">maisonmartin2020@gmail.com</a></p></div><p class="form-note">L’envoi du formulaire est une demande de réservation. Elle sera confirmée personnellement par le restaurant.</p></div>
+      <form name="reservation-evenement" method="POST" action="/merci-evenement/" data-netlify="true" netlify-honeypot="bot-field" class="reservation-form">
+        <input type="hidden" name="form-name" value="reservation-evenement">
+        <p hidden><label>Ne pas remplir ce champ<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <p class="form-note">Les champs marqués * sont obligatoires.</p>
+        <div class="form-grid">
+          <label>Votre nom *<input name="nom" autocomplete="name" required maxlength="120"></label>
+          <label>Votre e-mail *<input type="email" name="email" autocomplete="email" required maxlength="254"></label>
+          <label>Votre téléphone *<input type="tel" name="telephone" autocomplete="tel" required maxlength="40"></label>
+          <label>Nombre de personnes *<input type="number" name="convives" min="1" step="1" required></label>
+          <label>Date souhaitée *<input type="date" name="date" id="date-evenement" required></label>
+          <label>Heure souhaitée<input type="time" name="heure"></label>
+          <label class="full">Votre préférence<select name="formule" id="formule"><option value="a-definir">À définir ensemble</option><option value="menu-1">Menu 1</option><option value="menu-2">Menu 2</option><option value="menu-3">Menu 3</option><option value="a-la-carte">À la carte</option></select></label>
+          <label class="full">Votre message *<textarea name="message" rows="5" required maxlength="5000" placeholder="L’occasion, le lieu envisagé, vos envies…"></textarea></label>
+        </div>
+        <p class="form-note">Vos coordonnées et votre message sont transmis à Maison Martin via Netlify pour traiter votre demande. Évitez d’indiquer des informations sensibles dans ce formulaire.</p>
+        <button class="button" type="submit">Envoyer ma demande ↗</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="/">Maison Martin<img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24"></a><a href="/">Retour à l’accueil</a><a href="/admin/">Gérer le site</a></footer>
+</body>
+</html>
