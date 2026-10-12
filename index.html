@@ -1,79 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Restaurant Sérignan-du-Comtat | Maison Martin BAM</title>
-  <meta name="description" content="Maison Martin BAM, restaurant à Sérignan-du-Comtat : cuisine maison, plats à emporter et repas à partager dans le Vaucluse (84). Découvrez la carte et les horaires.">
-  <meta name="theme-color" content="#f9e0cf">
-  <link rel="stylesheet" href="/style.css">
-  <script src="/app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Martin BAM | Le restaurant qui s'emporte à Sérignan-du-Comtat</title>
+    <meta name="description" content="Découvrez Maison Martin BAM à Sérignan-du-Comtat (84830). Cuisine artisanale, service traiteur de fêtes dans le Vaucluse, petit-déjeuner et épicerie fine.">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </script>
 </head>
 <body>
-  <a class="skip" href="#main">Aller au contenu</a>
-  <header class="header">
-    <a class="wordmark" href="/" aria-label="Maison Martin BAM, accueil">Maison Martin
-      <img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24">
-    </a>
-    <nav aria-label="Navigation principale">
-      <a href="#cuisine">Notre cuisine</a><a href="#carte">La carte</a><a href="/evenement/">Événement</a><a href="#venir">Nous trouver</a>
-    </nav>
-    <a class="button" href="#carte">Voir la carte ↗</a>
-  </header>
-  <div id="alerte" role="status"><!-- ALERTE --></div>
-  <main id="main">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">MAISON MARTIN · SÉRIGNAN-DU-COMTAT</p>
-        <h1>Le restaurant<br>qui <em>s’emporte.</em></h1>
-        <p class="intro">Cuisiné chez nous,<br>dégusté où vous voulez.</p>
-        <p>Votre restaurant à Sérignan-du-Comtat vous accueille autour d’une cuisine maison : des plats à emporter, à partager ou à savourer sur place.</p>
-        <a class="button" href="#carte">Découvrir les plats ↓</a>
-      </div>
-      <img class="logo" src="/images/logo.png" alt="Maison Martin BAM — Le restaurant qui s’emporte" width="500" height="500">
+
+    <!-- Bandeau Alerte Supérieur -->
+    <div class="top-bar">
+        PREMIÈRE VERSION — Le restaurant qui s'emporte ouvre ses portes très prochainement ! 
+        <a href="/admin/" class="admin-link">| Gérer le site / Login |</a>
+    </div>
+
+    <!-- Barre de Navigation Initiale -->
+    <header class="navbar">
+        <div class="logo">Maison Martin <span>BAM</span></div>
+        <nav>
+            <a href="#accueil">Notre cuisine</a>
+            <a href="#la-maison">La maison</a>
+            <a href="#epicerie" class="nav-highlight">Mon épicerie</a>
+            <a href="#evenements">Événements & Fêtes</a>
+            <a href="#nous-trouver">Nous trouver</a>
+        </nav>
+    </header>
+
+    <!-- Section Hero d'Origine -->
+    <section id="accueil" class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <span class="badge-text">Maison Martin BAM</span>
+                <h1>Le restaurant<br>qui s'emporte.</h1>
+                <h3>Cuisiné chez nous, dégusté où vous voulez.</h3>
+                <p class="hero-p">Le fait maison prend l'air. À emporter, à partager ou à savourer ici... Retrouvez la cuisine Maison Martin, à votre façon.</p>
+                <div class="hero-cta">
+                    <a href="#epicerie" class="btn">🛒 Découvrir L'Épicerie</a>
+                    <a href="#evenements" class="btn btn-line">✨ Menus de Noël</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="logo-badge-container">
+                    <img src="images/logo-badge.png" alt="Maison Martin BAM Le Restaurant qui s'emporte" class="img-responsive-placeholder">
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer-banner">
+            FAIT MAISON / GOURMAND / CONVIVIAL / SPONTANÉ / BAM !
+        </div>
     </section>
-    <div class="ribbon" aria-hidden="true">FAIT MAISON ✳ GOURMAND ✳ CONVIVIAL ✳ BAM !</div>
-    <section id="cuisine" class="section">
-      <p class="eyebrow">À CHAQUE ENVIE, SON MOMENT</p>
-      <h2>Chez BAM,<br>on trouve quoi ?</h2>
-      <div class="offers">
-        <article><span class="eyebrow">01 / LE MIDI</span><img src="/images/tartine-transparent.png" alt="Illustration d’une tartine" loading="lazy"><h3>Le déjeuner</h3><p>Sandwichs maison, bowls, salades-repas et plats individuels pour votre pause déjeuner.</p></article>
-        <article><span class="eyebrow">02 / À PLUSIEURS</span><img src="/images/plat-transparent.png" alt="Illustration d’un plat à partager" loading="lazy"><h3>Plats à emporter</h3><p>Plats mijotés, recettes familiales, légumes cuisinés et accompagnements : la cuisine Maison Martin s’invite à votre table.</p></article>
-        <article><span class="eyebrow">03 / LA PAUSE DOUCE</span><img src="/images/cafe-transparent.png" alt="Illustration d’une tasse de café" loading="lazy"><h3>Le goûter</h3><p>Pâtisseries maison et boissons chaudes. Le plaisir de prendre son temps.</p></article>
-      </div>
-      <p class="vegetal">✳ Du végétal aussi : une cuisine gourmande qui a toute sa place à table.</p>
+
+    <!-- Section : Chez BAM on trouve quoi ? -->
+    <section class="section-padding">
+        <div class="section-intro">
+            <h2>Chez BAM, on trouve quoi ?</h2>
+            <p class="section-tagline">Une pause déjeuner, un dîner à partager, une envie de sucré... La cuisine maison vous accompagne.</p>
+        </div>
+
+        <div class="bam-features-grid">
+            <!-- 01 : Petit Déjeuner -->
+            <div class="feature-item">
+                <div class="feature-header">
+                    <span class="number">01</span>
+                    <span class="feature-title">LE MATIN & LE GOÛTER</span>
+                </div>
+                <div class="feature-img-box" style="background-color: var(--rose-poudre); display:flex; align-items:center; justify-content:center; color:white;">☕ [ Photo Douce ]</div>
+                <h3>Le Petit-Déjeuner & Goûter</h3>
+                <p>Boissons chaudes artisanales, viennoiseries fraîches, pâtisseries maison et jus pressés locaux pour prendre son temps dès 7h30.</p>
+                <a href="#epicerie" class="action-trigger">Une envie de sucré →</a>
+            </div>
+
+            <!-- 02 : Le Midi -->
+            <div class="feature-item">
+                <div class="feature-header">
+                    <span class="number">02</span>
+                    <span class="feature-title">LE MIDI</span>
+                </div>
+                <div class="feature-img-box" style="background-color: var(--vert-olive); display:flex; align-items:center; justify-content:center; color:white;">🍲 [ Le Midi ]</div>
+                <h3>Le déjeuner</h3>
+                <p>Sandwichs maison, bowls, salades-repas et plats individuels cuisinés chaque matin, prêts à emporter.</p>
+                <a href="#epicerie" class="action-trigger">Découvrir la carte →</a>
+            </div>
+
+            <!-- 03 : A Plusieurs -->
+            <div class="feature-item">
+                <div class="feature-header">
+                    <span class="number">03</span>
+                    <span class="feature-title">À PLUSIEURS</span>
+                </div>
+                <div class="feature-img-box" style="background-color: var(--beige-creme); display:flex; align-items:center; justify-content:center; color:var(--texte-sombre);">🥩 [ À Partager ]</div>
+                <h3>Le soir & à partager</h3>
+                <p>Plats mijotés, grands formats familiaux, terrines et accompagnements à emporter pour de vrais moments conviviaux.</p>
+                <a href="#epicerie" class="action-trigger">Préparer le dîner →</a>
+            </div>
+        </div>
+        <p class="vegetal-notice">🌱 <strong>Du végétal aussi.</strong> Une cuisine végétale gourmande, qui a toute sa place à table.</p>
     </section>
-    <section class="story section">
-      <p class="eyebrow">LA MÊME MAISON. UNE NOUVELLE FORMULE.</p>
-      <h2>On change de formule,<br><em>pas de cuisine.</em></h2>
-      <p>Maison Martin conserve son identité et son goût du fait maison. Avec BAM, profitez de notre cuisine à Sérignan-du-Comtat, chez vous… ou ici.</p>
-      <p>Vous recherchez un traiteur dans le Vaucluse (84) pour un repas à partager ? Contactez Maison Martin pour échanger sur vos envies et les possibilités du moment.</p>
+
+    <!-- Section : La même maison, une autre formule -->
+    <section id="la-maison" class="section-padding bg-cream-light">
+        <div class="grid-2-columns">
+            <div class="text-block">
+                <span class="subtitle">La même maison, une nouvelle formule</span>
+                <h2>On change de formule, pas de cuisine.</h2>
+                <p>Maison Martin conserve son identité et son goût du fait maison. Avec BAM, sa cuisine se déguste principalement à emporter, avec la possibilité de profiter d'un moment convivial sur place.</p>
+                <p>Pour le déjeuner, le goûter ou le repas du soir, découvrez une nouvelle façon de consommer vos plats favoris au cœur du village.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <div class="carousel-slide" style="background-color: var(--vert-olive-sombre);"><p>[ Ambiance Cuisine ]</p></div>
+                    <div class="carousel-slide" style="background-color: var(--rose-poudre);"><p>[ Présentation Épicerie ]</p></div>
+                    <div class="carousel-slide" style="background-color: var(--texte-sombre);"><p>[ Notre Équipe à Sérignan ]</p></div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="carte" class="section">
-      <p class="eyebrow">À VOUS DE CHOISIR</p>
-      <h2>La carte de la maison.</h2>
-      <p>Découvrez nos recettes et leurs prix. Les commandes et le paiement en ligne ne sont pas encore ouverts.</p>
-      <div id="filters" class="filters" role="group" aria-label="Filtrer les plats" hidden>
-        <button type="button" data-category="Tout" aria-pressed="true">Tout</button>
-        <button type="button" data-category="Entrée" aria-pressed="false">Entrées</button>
-        <button type="button" data-category="Plat" aria-pressed="false">Plats</button>
-        <button type="button" data-category="Dessert" aria-pressed="false">Desserts</button>
-        <button type="button" data-category="Vente à emporter" aria-pressed="false">Vente à emporter</button>
-      </div>
-      <div id="menu" class="menu"><!-- MENU --></div>
-      <p id="menu-status" role="status"></p>
-    </section>
-    <div id="rubriques"><!-- RUBRIQUES --></div>
-    <section id="venir" class="visit section">
-      <div><p class="eyebrow">À EMPORTER. OU À DÉGUSTER ICI.</p><h2>On se retrouve<br>à la maison ?</h2></div>
-      <div id="infos"><!-- INFOS --></div>
-    </section>
-  </main>
-  <footer>
-    <a class="wordmark" href="/">Maison Martin<img src="/images/bam-wordmark.svg" alt="BAM" width="100" height="24"></a>
-    <p>Cuisiné chez nous, dégusté où vous voulez.</p>
-    <a href="https://www.instagram.com/restaurant_maisonmartin/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-    <a href="/admin/">Gérer le site</a>
-  </footer>
-</body>
-</html>
+
+    <!-- Section E-Commerce : Mon Épicerie Fine (10 produits connectés au panier) -->
+    <section id="epicerie" class="section-padding">
+        <div class="section-intro">
+            <span class="subtitle">Sélection du terroir</span>
+            <h2>Mon Épicerie Fine & Commandes</h2>
+            <p class="section-tagline">Composez votre panier parmi nos 10 produits artisanaux phares et venez les retirer en boutique.</p>
+        </div>
+
+        <div class="checkout-grid">
+            <!-- Grille des 10 Produits -->
+            <div class="shop-products-grid">
+                <!-- P1 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🍾 [ Image ]</div>
+                    <h4>Huile d'Olive de Sérignan</h4>
+                    <p class="prod-desc">Bouteille de 50cl, pressée localement au moulin.</p>
+                    <div class="prod-meta"><span class="price">14.50 €</span><button class="btn-add-to-cart" onclick="ajouterAuPanier('Huile d\'Olive de Sérignan', 14.50)">Ajouter</button></div>
+                </div>
+                <!-- P2 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🍯 [ Image ]</div>
+                    <h4>Terrine Artisanale BAM</h4>
+                    <p class="prod-desc">Bocal de 180g, recette traditionnelle.</p>
+                    <div class="prod-meta"><span class="price">6.80 €</span><button class="btn-add-to-cart" onclick="ajouterAuPanier('Terrine Artisanale BAM', 6.80)">Ajouter</button></div>
+                </div>
+                <!-- P3 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🍓 [ Image ]</div>
+                    <h4>Confiture de Figues du Vaucluse</h4>
+                    <p class="prod-desc">Préparée au chaudron, pot de 250g.</p>
+                    <div class="prod-meta"><span class="price">5.20 €</span><button class="btn-add-to-cart" onclick="ajouterAuPanier('Confiture de Figues', 5.20)">Ajouter</button></div>
+                </div>
+                <!-- P4 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🍪 [ Image ]</div>
+                    <h4>Navettes Provençales</h4>
+                    <p class="prod-desc">Sachet de 200g, parfum fleur d'oranger.</p>
+                    <div class="prod-meta"><span class="price">4.90 €</span><button class="btn-add-to-cart" onclick="ajouterAuPanier('Navettes Provençales', 4.90)">Ajouter</button></div>
+                </div>
+                <!-- P5 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🥫 [ Image ]</div>
+                    <h4>Sel Artisanal aux Herbes</h4>
+                    <p class="prod-desc">Herbes de Provence et sel de Camargue (150g).</p>
+                    <div class="prod-meta"><span class="price">3.90 €</span><button class="btn-add-to-cart" onclick="ajouterAuPanier('Sel aux Herbes', 3.90)">Ajouter</button></div>
+                </div>
+                <!-- P6 -->
+                <div class="product-item-card">
+                    <div class="prod-img-placeholder">🍯 [ Image ]</div>
