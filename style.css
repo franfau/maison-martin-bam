@@ -61,18 +61,23 @@ h1, h2, h3, h4, .logo {
 .navbar .logo span {
     color: var(--vert-olive);
 }
+/* Style des onglets toujours soulignés */
 .navbar nav a {
     text-decoration: none;
-    color: var(--texte-sombre);
-    font-weight: 500;
+    color: var(--texte-sombre); /* Texte de base noir/sombre */
+    font-weight: 500; /* Écriture normale au départ */
     font-size: 0.95rem;
     margin-left: 30px;
+    padding-bottom: 4px; /* Éspace discret sous le mot */
+    border-bottom: 2px solid var(--texte-sombre); /* Ligne toujours visible */
+    transition: color 0.25s ease, border-color 0.25s ease; /* Animation fluide pour les couleurs */
 }
-.navbar nav .nav-highlight {
-    background-color: var(--vert-olive);
-    color: var(--fond-blanc);
-    padding: 10px 20px;
-    border-radius: 50px;
+
+/* Changement visuel lors du passage de la souris (Hover) */
+.navbar nav a:hover {
+    color: var(--vert-olive); /* Passe au vert olive */
+    border-bottom: 2px solid var(--vert-olive); /* La ligne passe au vert olive */
+    font-weight: 700; /* Le texte passe en GRAS (bold) instantanément */
 }
 
 /* Section Hero */
