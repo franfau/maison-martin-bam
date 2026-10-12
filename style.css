@@ -371,3 +371,34 @@ h1, h2, h3, h4, .logo {
     .navbar { padding: 30px; flex-direction: column; gap: 20px; }
     .hero-section h1 { font-size: 3.2rem; }
 }
+.img-responsive-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Force l'image à rester sagement dans son rond blanc */
+    border-radius: 50%;
+}
+
+.logo-badge-container {
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--fond-blanc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden; /* Empêche tout débordement */
+}
+
+/* Ajustement pour les téléphones */
+@media (max-width: 768px) {
+    .logo-badge-container {
+        width: 240px; /* On réduit un peu la taille du rond sur mobile */
+        height: 240px;
+        margin-top: 30px;
+    }
+    .hero-section h1 {
+        font-size: 3rem !important; /* On réduit le titre pour mobile */
+    }
+}
