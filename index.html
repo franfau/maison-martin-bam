@@ -55,53 +55,102 @@
         </div>
     </section>
 
-    <!-- Section : Chez BAM on trouve quoi ? -->
-    <section class="section-padding">
+      <!-- Section : Chez BAM on trouve quoi ? (Les 7 catégories officielles) -->
+    <section class="section-padding" style="background-color: var(--fond-blanc);">
         <div class="section-intro">
             <h2>Chez BAM, on trouve quoi ?</h2>
-            <p class="section-tagline">Une pause déjeuner, un dîner à partager, une envie de sucré... La cuisine maison vous accompagne.</p>
+            <p class="section-tagline">Entrez, ouvrez nos frigos et composez votre repas. Une cuisine artisanale faite maison, prête à emporter.</p>
         </div>
 
-        <div class="bam-features-grid">
-            <!-- 01 : Petit Déjeuner -->
-            <div class="feature-item">
-                <div class="feature-header">
-                    <span class="number">01</span>
-                    <span class="feature-title">LE MATIN & LE GOÛTER</span>
+        <div class="bam-features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+            
+            <!-- 01 : Plats Cuisinés -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">01</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">LES PLATS CUISINÉS & FAMILIAUX</span>
                 </div>
-                <div class="feature-img-box" style="background-color: var(--rose-poudre); display:flex; align-items:center; justify-content:center; color:white;">☕ [ Photo Douce ]</div>
-                <h3>Le Petit-Déjeuner & Goûter</h3>
-                <p>Boissons chaudes artisanales, viennoiseries fraîches, pâtisseries maison et jus pressés locaux pour prendre son temps dès 7h30.</p>
-                <a href="#epicerie" class="action-trigger">Une envie de sucré →</a>
+                <div style="background-color: var(--beige-creme); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">🍲 [ Grand Frigo ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Les grands mijotés</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Recettes traditionnelles et végétales (Bourguignon, lasagnes, tian) en formats 1, 2 ou 4 personnes.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">Portion : 8 - 12 € | Familial : 18 - 26 €</p>
             </div>
 
-            <!-- 02 : Le Midi -->
-            <div class="feature-item">
-                <div class="feature-header">
-                    <span class="number">02</span>
-                    <span class="feature-title">LE MIDI</span>
+            <!-- 02 : Fabrications Maison -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">02</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">FABRICATIONS MAISON & TRAITEUR</span>
                 </div>
-                <div class="feature-img-box" style="background-color: var(--vert-olive); display:flex; align-items:center; justify-content:center; color:white;">🍲 [ Le Midi ]</div>
-                <h3>Le déjeuner</h3>
-                <p>Sandwichs maison, bowls, salades-repas et plats individuels cuisinés chaque matin, prêts à emporter.</p>
-                <a href="#epicerie" class="action-trigger">Découvrir la carte →</a>
+                <div style="background-color: var(--vert-olive); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center; color:white;">🥩 [ Charcuterie ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Charcuteries & Spécialités</h4>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Charcuteries & Spécialités</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Pâté en croûte signature, caillettes provençales, terrines artisanales et versions végétales maison.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">À la tranche ou à la pièce</p>
             </div>
 
-            <!-- 03 : A Plusieurs -->
-            <div class="feature-item">
-                <div class="feature-header">
-                    <span class="number">03</span>
-                    <span class="feature-title">À PLUSIEURS</span>
+            <!-- 03 : Sandwichs & Salades -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">03</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">LE COIN DÉJEUNER RAPIDE</span>
                 </div>
-                <div class="feature-img-box" style="background-color: var(--beige-creme); display:flex; align-items:center; justify-content:center; color:var(--texte-sombre);">🥩 [ À Partager ]</div>
-                <h3>Le soir & à partager</h3>
-                <p>Plats mijotés, grands formats familiaux, terrines et accompagnements à emporter pour de vrais moments conviviaux.</p>
-                <a href="#epicerie" class="action-trigger">Préparer le dîner →</a>
+                <div style="background-color: var(--rose-poudre); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center; color:white;">🥪 [ Fraîcheur ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Sandwichs & Salades</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Focaccia garnie, bowls complets de saison, quiches croustillantes et soupes réconfortantes pour le midi.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">Formules : 5 à 11 €</p>
             </div>
+
+            <!-- 04 : Les Douceurs -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">04</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">DOUCEURS & GOUTER</span>
+                </div>
+                <div style="background-color: var(--beige-creme); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center;">🍰 [ Pâtisserie ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Les Desserts de BAM</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Créations gourmandes individuelles ou à partager, goûters des enfants et entremets originaux.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">Indiv : 3.50€ | Gâteau : 18 - 28€</p>
+            </div>
+
+            <!-- 05 : Plats Individuels Premium -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">05</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">PLATS INDIVIDUELS PREMIUM</span>
+                </div>
+                <div style="background-color: var(--texte-sombre); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center; color:white;">✨ [ Gastronomie ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Cuisine Fine Réchauffable</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Recettes raffinées avec sauces et toppings séparés : Risotto aux truffes, Joue de bœuf confite, Cabillaud chorizo.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">Barquette indiv : 15.90 - 21.90 €</p>
+            </div>
+
+            <!-- 06 : À Boire -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px;">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">06</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--texte-gris);">BOISSONS DU RESTAURANT</span>
+                </div>
+                <div style="background-color: var(--vert-olive-sombre); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center; color:white;">🍾 [ Cave ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">À boire chez BAM</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Boissons artisanales pour accompagner vos repas : cafés chauds, thés glacés maison, vins de la région et bières locales.</p>
+                <p style="font-weight:700; margin-top:15px; font-size:0.9rem; color:var(--vert-olive);">Sélection locale et de qualité</p>
+            </div>
+
+            <!-- 07 : L'Épicerie fine -->
+            <div class="feature-item" style="background: #fbf7f4; padding: 30px; border-radius: 20px; border: 2px solid var(--vert-olive);">
+                <div class="feature-header" style="display:flex; align-items:center; margin-bottom:15px;">
+                    <span style="font-size: 1.5rem; color: var(--vert-olive); font-weight: bold; margin-right: 10px;">07</span>
+                    <span style="font-size: 0.8rem; letter-spacing:1px; font-weight:700; color: var(--vert-olive);">LE RAYON ÉPICERIE FINE</span>
+                </div>
+                <div style="background-color: var(--beige-creme); height: 120px; border-radius: 12px; margin-bottom: 20px; display:flex; align-items:center; justify-content:center; color:var(--texte-sombre);">🛒 [ Boutiques Étagères ]</div>
+                <h4 style="font-size:1.3rem; margin-bottom:10px;">Mon Épicerie Fine</h4>
+                <p style="font-size:0.9rem; color:var(--texte-gris); line-height:1.4;">Les étagères sèches du terroir : granola, miels de lavande locaux, sirops maison, confitures et coffrets cadeaux d'événements.</p>
+                <a href="#epicerie" style="display:inline-block; margin-top:15px; color:var(--vert-olive); font-weight:700; text-decoration:none;">🛒 Accéder au panier de commande →</a>
+            </div>
+
         </div>
-        <p class="vegetal-notice">🌱 <strong>Du végétal aussi.</strong> Une cuisine végétale gourmande, qui a toute sa place à table.</p>
     </section>
-
     <!-- Section : La même maison, une autre formule -->
     <section id="la-maison" class="section-padding bg-cream-light">
         <div class="grid-2-columns">
