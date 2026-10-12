@@ -1,4 +1,5 @@
 @import url('https://googleapis.com');
+
 :root {
     --vert-olive: #596925;
     --vert-olive-sombre: #424e1b;
@@ -9,8 +10,12 @@
     --fond-blanc: #ffffff;
 }
 
+/* Application de la police unique moderne sur TOUT le site */
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif !important; /* Le !important force le navigateur à appliquer la police partout */
     margin: 0;
     padding: 0;
     color: var(--texte-sombre);
@@ -18,15 +23,31 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Force aussi les liens de la navigation à utiliser la bonne police */
-.navbar nav a {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-    text-decoration: none;
+/* Style précis des grands titres de la maquette (Look fin et moderne) */
+h1, h2, h3, h4, .logo {
+    font-weight: 400; /* Look minimaliste et fin */
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    line-height: 1.05;
+    color: var(--vert-olive);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* Le Logo Maison Martin BAM */
+.navbar .logo {
+    font-size: 1.8rem;
     color: var(--texte-sombre);
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-left: 30px;
-    transition: color 0.3s;
+    font-weight: 400;
+    margin: 0;
+}
+.navbar .logo span {
+    color: var(--vert-olive);
+    font-weight: 400;
 }
 
 /* Bandeau Supérieur */
@@ -53,18 +74,10 @@ body {
     padding: 30px 80px;
     background-color: var(--beige-creme);
 }
-.navbar .logo {
-    font-size: 1.8rem;
-    color: var(--texte-sombre);
-    margin: 0;
-}
-.navbar .logo span {
-    color: var(--vert-olive);
-}
 .navbar nav a {
     text-decoration: none;
     color: var(--texte-sombre);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     margin-left: 30px;
     transition: color 0.3s;
@@ -101,16 +114,10 @@ body {
     display: block;
     margin-bottom: 20px;
 }
-.hero-section h1 {
-    font-size: 5rem;
-    line-height: 1.05;
-    color: var(--texte-sombre);
-    margin-bottom: 25px;
-}
 .hero-section h3 {
     font-size: 2rem;
     font-weight: 400;
-    color: var(--vert-olive);
+    color: var(--texte-sombre);
     margin-bottom: 25px;
 }
 .hero-p {
@@ -120,8 +127,8 @@ body {
     margin-bottom: 40px;
 }
 .logo-badge-container {
-    width: 320px;
-    height: 320px;
+    width: 420px;
+    height: 420px;
     margin: 0 auto;
     border-radius: 50%;
     background-color: var(--fond-blanc);
@@ -129,6 +136,13 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden; 
+}
+.img-responsive-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 .hero-footer-banner {
     text-align: center;
@@ -141,7 +155,7 @@ body {
     margin-top: 60px;
 }
 
-/* Correction des Espacements Généraux (Paddings pour aérer le contenu) */
+/* Sections et Espacements */
 .section-padding {
     padding: 100px 80px;
     background-color: var(--fond-blanc);
@@ -153,13 +167,12 @@ body {
 .bg-cream-light .subtitle, .bg-cream-light h2, .bg-cream-light p {
     color: var(--fond-blanc) !important;
 }
-
 .section-intro {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px auto;
 }
-.section-intro h2 { font-size: 3.5rem; color: var(--texte-sombre); }
+.section-intro h2 { font-size: 3.5rem; color: var(--texte-sombre); font-weight: 400; }
 .section-tagline { font-size: 1.3rem; color: var(--texte-gris); }
 
 /* Grille 3 fonctionnalités (Chez BAM) */
@@ -172,7 +185,7 @@ body {
 }
 .feature-item {
     background: #fbf7f4;
-    padding: 50px 40px; /* Ajout d'air à l'intérieur */
+    padding: 50px 40px;
     border-radius: 24px;
     text-align: left;
     box-shadow: 0 4px 20px rgba(0,0,0,0.01);
@@ -184,7 +197,6 @@ body {
 }
 .feature-header .number {
     font-size: 1.8rem;
-    font-family: 'Playfair Display', serif;
     color: var(--vert-olive);
     margin-right: 15px;
 }
@@ -201,7 +213,7 @@ body {
     background-color: var(--rose-poudre);
     margin-bottom: 30px;
 }
-.feature-item h3 { font-size: 2rem; color: var(--texte-sombre); margin-bottom: 15px; }
+.feature-item h3 { font-size: 2rem; color: var(--texte-sombre); font-weight: 400; margin-bottom: 15px; }
 .feature-item p { color: var(--texte-gris); font-size: 1.05rem; line-height: 1.6; }
 .action-trigger {
     display: inline-block;
@@ -212,7 +224,7 @@ body {
 }
 .vegetal-notice { text-align: center; margin-top: 50px; font-size: 1.1rem; }
 
-/* Grille 2 colonnes (On change de formule) */
+/* Grille 2 colonnes (La maison) */
 .grid-2-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -220,9 +232,9 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0; /* Air ajouté */
+    padding: 40px 0;
 }
-.text-block h2 { font-size: 3.5rem; }
+.text-block h2 { font-size: 3.5rem; font-weight: 400; }
 .text-block p { font-size: 1.2rem; line-height: 1.7; }
 
 /* Carrousel */
@@ -266,7 +278,6 @@ body {
 .tab-btn {
     background: none;
     border: none;
-    font-family: inherit;
     font-size: 1.1rem;
     padding: 10px 20px;
     cursor: pointer;
@@ -299,7 +310,7 @@ body {
     font-size: 1.05rem;
 }
 
-/* Redressement de la section Mon Épicerie Fine */
+/* Épicerie Fine */
 .shop-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -311,7 +322,6 @@ body {
     background: #fbf7f4;
     padding: 30px;
     border-radius: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
 }
 .prod-img-placeholder {
     background-color: var(--beige-creme);
@@ -325,10 +335,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Section Formulaires Événements */
-.evt-menus-list { margin: 25px 0; }
-.evt-menu-card { background: #FFF9F4; padding: 15px; border-radius: 6px; margin-bottom: 12px; border-left: 3px solid var(--vert-olive); }
-.evt-menu-card h5 { margin: 0 0 5px 0; font-size: 1.1rem; color: var(--vert-olive); }
+/* Formulaires Événements */
 .classic-form {
     background-color: var(--beige-creme);
     padding: 45px;
@@ -371,40 +378,9 @@ body {
     100% { transform: translateX(0); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .hero-grid, .grid-2-columns, .checkout-grid { grid-template-columns: 1fr; }
     .navbar { padding: 30px; flex-direction: column; gap: 20px; }
-    .hero-section h1 { font-size: 3.2rem; }
+    .hero-section h1 { font-size: 3.2rem !important; }
+    .logo-badge-container { width: 290px; height: 290px; }
 }
-.img-responsive-placeholder {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-.logo-badge-container {
-    width: 420px; /* Augmenté de 320px à 420px pour qu'il soit bien grand sur ordinateur */
-    height: 420px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background-color: var(--fond-blanc);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    overflow: hidden; 
-}
-
-/* Ajustement sur-mesure pour les téléphones */
-@media (max-width: 768px) {
-    .logo-badge-container {
-        width: 290px; /* Augmenté pour mobile : bien visible sans casser la mise en page */
-        height: 290px;
-        margin-top: 30px;
-    }
-    .hero-section h1 {
-        font-size: 3.2rem !important;
-    }
-}
-Utilisez le code avec précaution.
