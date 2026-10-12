@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif !important; /* Le !important force le navigateur à appliquer la police partout */
     margin: 0;
     padding: 0;
     color: var(--texte-sombre);
@@ -18,11 +18,15 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Typographies */
-h1, h2, h3, h4, .logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
-    margin: 0 0 20px 0;
+/* Force aussi les liens de la navigation à utiliser la bonne police */
+.navbar nav a {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    text-decoration: none;
+    color: var(--texte-sombre);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-left: 30px;
+    transition: color 0.3s;
 }
 
 /* Bandeau Supérieur */
